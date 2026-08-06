@@ -1,0 +1,446 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Arial, sans-serif;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+    background:linear-gradient(135deg,#dceeff,#f5fbff);
+    color:#333;
+}
+
+
+
+/* LOCK SCREEN */
+
+
+#lockScreen{
+
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:linear-gradient(135deg,#74b9ff,#dff3ff);
+
+}
+
+
+
+.lock-box{
+
+    width:90%;
+    max-width:420px;
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    animation:fadeIn 1s ease;
+
+}
+
+
+
+
+.lock-box h1{
+
+    color:#2980b9;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+.lock-box p{
+
+    line-height:1.7;
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+.lock-box input{
+
+    width:100%;
+
+    padding:14px;
+
+    border-radius:12px;
+
+    border:1px solid #ccc;
+
+    outline:none;
+
+    margin-bottom:15px;
+
+    font-size:16px;
+
+}
+
+
+
+.lock-box input:focus{
+
+    border-color:#3498db;
+
+}
+
+
+
+
+
+.lock-box button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#3498db;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+
+.lock-box button:hover{
+
+    background:#217dbb;
+
+    transform:scale(1.03);
+
+}
+
+
+
+
+
+#error{
+
+    color:red;
+
+    margin-top:10px;
+
+}
+
+
+
+
+
+/* MAIN WEBSITE */
+
+
+#website{
+
+    display:none;
+
+    opacity:0;
+
+    transition:opacity 1.2s ease;
+
+}
+
+
+
+#website.show{
+
+    opacity:1;
+
+}
+
+
+
+
+
+.hero{
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    color:white;
+
+    background:linear-gradient(135deg,#5dade2,#85c1e9);
+
+}
+
+
+
+.hero h1{
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+
+
+
+.card{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:35px auto;
+
+    padding:30px;
+
+    background:white;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    animation:slideUp .8s ease;
+
+}
+
+
+
+.card h2{
+
+    color:#2980b9;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.card p,
+.card li{
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+
+.card ul{
+
+    padding-left:25px;
+
+}
+/* SONG BUTTONS */
+
+.song-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,#3498db,#5dade2);
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(52,152,219,.3);
+
+}
+
+
+
+.song-btn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 25px rgba(52,152,219,.4);
+
+}
+
+
+
+.song-btn:active{
+
+    transform:scale(.97);
+
+}
+
+
+
+
+/* ANIMATION */
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+
+
+
+@keyframes slideUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+
+
+/* SMOOTH SCROLL */
+
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track{
+
+    background:#eaf6ff;
+
+}
+
+
+::-webkit-scrollbar-thumb{
+
+    background:#5dade2;
+
+    border-radius:10px;
+
+}
+
+
+
+
+
+/* MOBILE RESPONSIVE */
+
+
+@media(max-width:768px){
+
+
+    .hero{
+
+        padding:60px 20px;
+
+    }
+
+
+    .hero h1{
+
+        font-size:30px;
+
+    }
+
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+
+    .card{
+
+        width:94%;
+
+        padding:22px;
+
+    }
+
+
+    .lock-box{
+
+        padding:25px;
+
+    }
+
+
+    .song-btn{
+
+        font-size:16px;
+
+    }
+
+
+}
